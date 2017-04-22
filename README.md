@@ -1,6 +1,6 @@
-# omegaUp Give Tracker
+# omegaUp Toolkit
 
-This project contains the code for the Give Tracker app for omegaUp volunteers.
+This project contains the code for the omegaUp Toolkit app for volunteers.
 
 # Simple instructions
 
@@ -25,7 +25,7 @@ This project contains the code for the Give Tracker app for omegaUp volunteers.
 
 1.  Clone the repository:
 
-        git clone https://github.com/rcxr/omegaup-givetracker.git
+        git clone https://github.com/rcxr/omegaup-toolkit.git
 
 1.  Install dependencies using Yarn:
 

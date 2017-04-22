@@ -10,11 +10,12 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.set("trust proxy", true);
 
-// Redirect root to /give
+// Redirect root to /home
 app.get("/", (req, res) => {
-  res.redirect("/give");
+  res.redirect("/home");
 });
 
+app.use("/home", require("./js/home/main"));
 app.use("/give", require("./js/give/main"));
 app.use(express.static("content"));
 

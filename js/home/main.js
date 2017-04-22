@@ -19,16 +19,16 @@ router.use((req, res, next) => {
 });
 
 /**
- * GET /give
+ * GET /home
  *
- * Renders the Give dashboard.
+ * Renders the Home dashboard.
  */
 router.get("/", (req, res, next) => {
-  res.render("give/main.pug", {});
+  res.render("home/main.pug", {});
 });
 
 /**
- * Errors on "/give/*" routes.
+ * Errors on "/home/*" routes.
  */
 router.use((err, req, res, next) => {
   // Format error and forward to generic error handler for logging and
