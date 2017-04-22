@@ -6,7 +6,6 @@ const config = require("./config");
 
 const app = express();
 
-app.disable("etag");
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 app.set("trust proxy", true);

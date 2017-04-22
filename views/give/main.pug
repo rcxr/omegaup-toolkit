@@ -1,14 +1,12 @@
 extends ../base.pug
 block content
   script(src="/js/give.js")
-
-  .alert.alert-info.alert-dismissible
-    button.close &times;
+  .alert.alert-info.alert-dismissible(role="alert")
+    button.close(data-dismiss="alert") &times;
     i.glyphicon.glyphicon-info-sign
     | #{' '}Make sure you have already logged in into#{' '}
     a(href="https://microsoft.benevity.org", target="_blank")
       strong Microsoft Benevity
-
   #volunteer-panel.panel.panel-default
     .panel-heading
       .panel-title Volunteer Hours Report
