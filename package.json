@@ -1,0 +1,50 @@
+{
+  "name": "omegaup-toolkit",
+  "version": "1.0.0",
+  "description": "omegaUp Toolkit",
+  "repository": "https://github.com/rcxr/omegaup-toolkit",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "cover": "nyc --cache npm test; nyc report --reporter=html",
+    "init-cloudsql": "node books/model-cloudsql.js"
+  },
+  "author": "rcxr",
+  "contributors": [
+    {
+      "name": "Rafa Díaz",
+      "email": "racrux@gmail.com"
+    }
+  ],
+  "license": "Apache-2.0",
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^1.0.0",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "jstransformer": "^1.0.0",
+    "nconf": "^0.8.4",
+    "pug": "^2.0.0-beta.12",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "ava": "~0.19.1",
+    "proxyquire": "~1.7.11",
+    "sinon": "~2.1.0",
+    "tap-dot": "~1.0.5"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  }
+}
