@@ -1,4 +1,4 @@
-h1, h2, h3, .caption {
+h1, h2, h3 {
   font-family: 'Rubik', sans-serif;
 }
 
@@ -23,30 +23,38 @@ h1, h2, h3, .caption {
   color: #58D;
 }
 
-.alert, .thumbnail, .panel, .navbar, .panel table td, .panel table {
+.alert, .panel, .navbar, .panel table td, .panel table {
   border: 0 !important;
   box-shadow: none !important;
 }
 
 .dashboard {
-  max-height: 128px;
-}
-
-i.dashboard {
-  font-size: 128px;
+  height: 128px;
   width: 100%;
   text-align: center;
+  font-size: 92px;
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.dashboard img, .dashboard i {
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: middle;
 }
 
 .caption {
-  height: 64px;
-  vertical-align: middle;
-  font-size: 18px;
-  text-align: center;
-  font-weight: bold;
+  width: 100%;
 }
 
-.caption img {
-  max-width: 100%;
-  max-height: 100%;
+.caption p.title {
+  text-align: center;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
 }
