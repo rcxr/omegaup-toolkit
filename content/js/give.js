@@ -1,5 +1,5 @@
 $(function() {
-  var table = $("#volunteer-table");
+  var table = $("#give-table");
   table.hide();
 
   if (!(window.File && window.FileReader && window.FileList && window.Blob)) {
@@ -9,8 +9,8 @@ $(function() {
   function filePickerHander(evt) {
     var reader = new FileReader();
     reader.onload = function(e) {
-      var body = $("#volunteer-table tbody");
-      $("#volunteer-info").hide();
+      var body = $("#give-table tbody");
+      $("#give-info").hide();
       body.empty();
       table.hide();
 
@@ -35,5 +35,5 @@ $(function() {
     reader.readAsText(evt.target.files[0]);
   };
 
-  $("#volunteer-report-picker").on("change", filePickerHander);
+  $("#give-report-picker").on("change", filePickerHander);
 })

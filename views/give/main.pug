@@ -4,12 +4,10 @@ block content
   .alert.alert-info.alert-dismissible(role="alert")
     button.close(data-dismiss="alert") &times;
     i.glyphicon.glyphicon-info-sign
-    | #{' '}Make sure you have already logged in into#{' '}
+    span #{' '}Make sure you have already logged in into#{' '}
     a(href="https://microsoft.benevity.org", target="_blank")
       strong Microsoft Benevity
-  #volunteer-panel.panel.panel-default
-    .panel-heading
-      .panel-title Volunteer Hours Report
+  .panel.panel-default
     .panel-body
       .btn-toolbar
         .btn-group
@@ -20,32 +18,32 @@ block content
           a.btn.btn-default(href="https://microsoft.benevity.org/volunteer/export/my-history/2017", target="_blank")
             i.glyphicon.glyphicon-download-alt
             span #{' '}Get Report
-          label(for="volunteer-report-picker").btn.btn-default
+          label.btn.btn-default(for="give-report-picker")
             i.glyphicon.glyphicon-calendar
             span #{' '}Load Report
-            input(type="file")#volunteer-report-picker
-    table.table.table-hover.table-striped#volunteer-table
+            input(type="file")#give-report-picker
+    table.table.table-hover.table-striped#give-table
       thead
         tr
-          td Date
-          td Hours
-          td Match
+          th Date
+          th Hours
+          th Match
       tbody
-    #volunteer-info.jumbotron
-      h1 README
+    #give-info.jumbotron
+      h2 README
       strong
       | This place is your best friend for tracking the time you have volunteered to #{' '}
       a(href="https://omegaup.org", target="_blank")
         strong omegaUp
       | , additionally you can also review a report of what you have contributed this year!
-      h2 How to&hellip;
+      h3 How to&hellip;
       dl.dl-horizontal
         dt Track Hours
         dd
           | Simply press the#{' '}
           strong
             i.glyphicon.glyphicon-plus
-            | #{' '}Add Hours
+            span #{' '}Add Hours
           | #{' '}button (this will take you to the #{' '}
           a(href="https://microsoft.benevity.org/volunteer/external/track/", target="_blank")
             strong Track External Volunteering
@@ -58,17 +56,11 @@ block content
           | #{' '} site. It's safe - as it's just an anchor tag!
         dt Load Report
         dd Select the previously downloaded report and see your stats!
-      h3
+      h3.pacifico
         i.glyphicon.glyphicon-heart
-        | #{' '}Thank you for all your support!
+        span #{' '}Thank you for all your support!
 
   //
     TODO:
     Summary
-    Link to tarjetas (o forma de tarjetas)
-    Link to trello
-    Link to slack
-    Link to onenote
-    Link to time tracker
-    Shortcuts
     Sorting

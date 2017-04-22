@@ -1,16 +1,18 @@
+h1, h2, h3, .caption {
+  font-family: 'Rubik', sans-serif;
+}
+
+.pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
 .navbar-logo {
   float: left;
   height: 20px;
 }
 
-#volunteer-report-picker {
+#give-report-picker {
   display: none;
-}
-
-#volunteer-info.jumbotron {
-  margin: 15px;
-  margin-top: 0;
-  margin-bottom: 15px;
 }
 
 .glyphicon-heart {
@@ -19,4 +21,32 @@
 
 .glyphicon-home {
   color: #58D;
+}
+
+.alert, .thumbnail, .panel, .navbar, .panel table td, .panel table {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.dashboard {
+  max-height: 128px;
+}
+
+i.dashboard {
+  font-size: 128px;
+  width: 100%;
+  text-align: center;
+}
+
+.caption {
+  height: 64px;
+  vertical-align: middle;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.caption img {
+  max-width: 100%;
+  max-height: 100%;
 }
