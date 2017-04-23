@@ -1,8 +1,8 @@
 $(function() {
   var Categories = {
     NONE: 0,
-    DEV: 1,
-    ORG: 2,
+    TECH: 1,
+    DEV: 2,
     SOCIAL: 4,
     ALL: 7
   };
@@ -11,37 +11,39 @@ $(function() {
   var triggerGlobalUntil = 0;
 
   function Thumbnail(category, url, thumbnail, title, description, shortcut) {
-      var element = $("<div></div>")
-        .addClass("col-xs-6 col-md-3")
-        .append($("<a></a>")
-          .addClass("thumbnail")
-          .attr("href", url)
-          .attr("target", "_blank")
-          .append($("<div></div>")
-            .addClass("dashboard")
-            .append($("<span></span>")
-              .addClass("helper")
-              .text(" "))
-            .append(thumbnail))
-          .append($("<div></div>")
-            .addClass("caption")
-            .append($("<p></p>")
-              .addClass("title")
-              .text(title))
-            .append($("<span>hotkey: </span><kbd><kbd>g</kbd>, <kbd>" + shortcut + "</kbd></kbd>"))));
-
       var trigger = function() {
         if (!window.open(url, "_blank")) {
-          alert('Allow popups for the website.');
+          alert("Allow popups for the website.");
         }
-      }
-
-      this.getElement = function() {
-        return element;
       };
 
-      this.attemptTrigger = function(enabled) {
-        if (enabled & category) {
+      this.filter = function(filter) {
+        return filter & category;
+      };
+
+      this.generate = function() {
+        return $("<div></div>")
+          .addClass("col-xs-4 col-md-2")
+          .append($("<a></a>")
+            .addClass("thumbnail")
+            .attr("href", url)
+            .attr("target", "_blank")
+            .append($("<div></div>")
+              .addClass("dashboard")
+              .append($("<span></span>")
+                .addClass("helper")
+                .text(" "))
+              .append($(thumbnail)))
+            .append($("<div></div>")
+              .addClass("caption")
+              .append($("<p></p>")
+                .addClass("title")
+                .text(title))
+              .append($("<span>{ hotkey <kbd><kbd>g</kbd>, <kbd>" + shortcut + "</kbd></kbd> }</span>"))));
+      };
+
+      this.attemptTrigger = function(filter) {
+        if (filter & category) {
           trigger();
         }
       };
@@ -54,21 +56,25 @@ $(function() {
   };
 
   var thumbnails = [
-    new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", $("<i></i>").addClass("glyphicon glyphicon-time"), "time tracker", "", "w"),
-    new Thumbnail(Categories.ALL, "slack://omegauporg.slack.com", $("<img></img>").attr("src", "/img/Slack_Mark_Web.png"), "channels", "", "s"),
-    new Thumbnail(Categories.BOARD, "https://enterpos.net/omegaup/", $("<i></i>").addClass("glyphicon glyphicon-briefcase"), "enterprise", "", "e"),
-    new Thumbnail(Categories.BOARD, "https://trello.com/omegaup", $("<img></img>").attr("src", "/img/trello-logo-blue.png"), "tasks", "", "q"),
-    new Thumbnail(Categories.DEV, "https://github.com/omegaup/omegaup", $("<img></img>").addClass("black").attr("src", "/img/GitHub-Mark-Light-120px-plus.png"), "repo", "", "g"),
-    new Thumbnail(Categories.BOARD, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", $("<img></img>").attr("src", "/img/AppLockup_rgb_OneNote_Large_OneNote_88.png"), "notes", "", "n"),
-    new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", $("<i></i>").addClass("glyphicon glyphicon-credit-card"), "business cards", "", "b"),
-    new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", $("<img></img>").attr("src", "/img/Twitter_Logo_Blue.png"), "twitter", "", "t"),
-    new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", $("<img></img>").attr("src", "/img/FB-f-Logo__blue_1024.png"), "facebook", "", "f"),
-    new Thumbnail(Categories.NONE, "https://omegaup.com", $("<img></img>").attr("src", "/img/square.png"), "site", "", "o"),
+    new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", "<i class='glyphicon glyphicon-time'></i>", "track", "", "w"),
+    new Thumbnail(Categories.TECH, "https://github.com/omegaup/omegaup", "<img class='black' src='/img/GitHub-Mark-Light-120px-plus.png'></img>", "repo", "", "g"),
+    new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='glyphicon glyphicon-briefcase'></i>", "enterprise", "", "e"),
+    new Thumbnail(Categories.ALL, "slack://omegauporg.slack.com", "<img src='/img/Slack_Mark_Web.png'></img>", "channels", "", "s"),
+    new Thumbnail(Categories.DEV, "https://mail.google.com/mail/u/1/", "<img src='/img/logo_gmail_128px.png'></img>", "mail", "", "m"),
+    new Thumbnail(Categories.DEV, "https://trello.com/omegaup", "<img src='/img/trello-logo-blue.png'></img>", "tasks", "", "q"),
+    new Thumbnail(Categories.DEV, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", "<img src='/img/AppLockup_rgb_OneNote_Large_OneNote_88.png'></img>", "notes", "", "n"),
+    new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", "<img src='/img/Twitter_Logo_Blue.png'></img>", "twitter", "", "t"),
+    new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='/img/FB-f-Logo__blue_1024.png'></img>", "facebook", "", "f"),
+    new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='/img/Logo-2C-128px-R.png'></img>", "network", "", "l"),
+    new Thumbnail(Categories.NONE, "https://omegaup.com", "<img src='/img/square.png'></img>", "com", "", "o"),
+    new Thumbnail(Categories.NONE, "https://omegaup.org", "<img class='black' src='/img/square.png'></img>", "org", "", "i"),
+    new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='glyphicon glyphicon-credit-card'></i>", "orders", "", "b"),
   ];
 
-  var dashboard = $("#dashboard-row");
-
-  thumbnails.forEach(function(thumbnail) { dashboard.append(thumbnail.getElement()); });
+  thumbnails.forEach(function(thumbnail) { if (thumbnail.filter(Categories.TECH)) { $("#dashboard-tech").append(thumbnail.generate()); } });
+  thumbnails.forEach(function(thumbnail) { if (thumbnail.filter(Categories.DEV)) { $("#dashboard-dev").append(thumbnail.generate()); } });
+  thumbnails.forEach(function(thumbnail) { if (thumbnail.filter(Categories.SOCIAL)) { $("#dashboard-social").append(thumbnail.generate()); } });
+  thumbnails.forEach(function(thumbnail) { if (!thumbnail.filter(Categories.ALL)) { $("#dashboard-other").append(thumbnail.generate()); } });
 
   $(document).bind("keydown", "g", function() {
     setTimeout(function() {
@@ -80,15 +86,15 @@ $(function() {
     triggerGlobalUntil = new Date().getTime() + 1000;
   });
 
-  $(document).bind("keydown", "d", function() {
+  $(document).bind("keydown", "t", function() {
     if (new Date().getTime() < triggerGlobalUntil) {
       thumbnails.forEach(function(thumbnail) {
-        thumbnail.attemptTrigger(Categories.DEV);
+        thumbnail.attemptTrigger(Categories.TECH);
       });
     }
   });
 
-  $(document).bind("keydown", "b", function() {
+  $(document).bind("keydown", "d", function() {
     if (new Date().getTime() < triggerGlobalUntil) {
       thumbnails.forEach(function(thumbnail) {
         thumbnail.attemptTrigger(Categories.BOARD);
