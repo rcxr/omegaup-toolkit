@@ -39,7 +39,7 @@ $(function() {
               .append($("<p></p>")
                 .addClass("title")
                 .text(title))
-              .append($("<span>{ hotkey <kbd><kbd>g</kbd>, <kbd>" + shortcut + "</kbd></kbd> }</span>"))));
+              .append($("<span class='hidden-xs hidden-sm'>{ hotkey <kbd><kbd>g</kbd>, <kbd>" + shortcut + "</kbd></kbd> }</span>"))));
       };
 
       this.attemptTrigger = function(filter) {
@@ -58,14 +58,14 @@ $(function() {
   var thumbnails = [
     new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", "<i class='glyphicon glyphicon-time'></i>", "track", "", "w"),
     new Thumbnail(Categories.TECH, "https://github.com/omegaup/omegaup", "<img class='black' src='/img/GitHub-Mark-Light-120px-plus.png'></img>", "repo", "", "g"),
-    new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='glyphicon glyphicon-briefcase'></i>", "enterprise", "", "e"),
+    new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='glyphicon glyphicon-briefcase'></i>", "erp", "", "e"),
     new Thumbnail(Categories.ALL, "slack://omegauporg.slack.com", "<img src='/img/Slack_Mark_Web.png'></img>", "channels", "", "s"),
     new Thumbnail(Categories.DEV, "https://mail.google.com/mail/u/1/", "<img src='/img/logo_gmail_128px.png'></img>", "mail", "", "m"),
     new Thumbnail(Categories.DEV, "https://trello.com/omegaup", "<img src='/img/trello-logo-blue.png'></img>", "tasks", "", "q"),
     new Thumbnail(Categories.DEV, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", "<img src='/img/AppLockup_rgb_OneNote_Large_OneNote_88.png'></img>", "notes", "", "n"),
-    new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", "<img src='/img/Twitter_Logo_Blue.png'></img>", "twitter", "", "t"),
-    new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='/img/FB-f-Logo__blue_1024.png'></img>", "facebook", "", "f"),
-    new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='/img/Logo-2C-128px-R.png'></img>", "network", "", "l"),
+    new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", "<img src='/img/Twitter_Logo_Blue.png'></img>", "tw", "", "t"),
+    new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='/img/FB-f-Logo__blue_1024.png'></img>", "fb", "", "f"),
+    new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='/img/Logo-2C-128px-R.png'></img>", "linkedIn", "", "l"),
     new Thumbnail(Categories.NONE, "https://omegaup.com", "<img src='/img/square.png'></img>", "com", "", "o"),
     new Thumbnail(Categories.NONE, "https://omegaup.org", "<img class='black' src='/img/square.png'></img>", "org", "", "i"),
     new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='glyphicon glyphicon-credit-card'></i>", "orders", "", "b"),
