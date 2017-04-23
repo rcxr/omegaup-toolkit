@@ -39,7 +39,7 @@ h1, h2, h3 {
   display: none;
 }
 
-.alert, .panel, .navbar, .panel table td, .panel table {
+.alert, .panel, .navbar, .panel table td, .panel table, .thumbnail {
   border: 0 !important;
   box-shadow: none !important;
 }
@@ -52,6 +52,9 @@ a.thumbnail {
   height: 64px;
   color: black;
   overflow: hidden;
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .helper {
@@ -64,11 +67,11 @@ a.thumbnail {
   max-width: 100%;
   max-height: 100%;
   vertical-align: middle;
-  font-size: 36px;
+  font-size: 32px;
 }
 
-.black {
-  filter: brightness(0);
+.towhite {
+  filter: grayscale(100%) invert() brightness(1000%);
 }
 
 .caption {

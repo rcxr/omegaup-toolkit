@@ -18,17 +18,20 @@ html(lang="en")
           .navbar-brand
             img(src="/img/main.png").navbar-logo
             | Toolkit
-        ul.nav.navbar-nav
-          li
-            a(href="/home")
-              i.glyphicon.glyphicon-home
-              | #{' '}Home
-          li
-            a(href="/give")
-              i.glyphicon.glyphicon-heart
-              | #{' '}Give
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            li
+              a(href="/home")
+                i.glyphicon.glyphicon-home
+                | #{' '}Home
+            li
+              a(href="/give")
+                i.glyphicon.glyphicon-heart
+                | #{' '}Give
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href="https://github.com/rcxr/omegaup-toolkit/issues", target="_blank")
+                i.glyphicon.glyphicon-bullhorn
+                | #{' '}Ideas?
     .container
       block content
-// TODO
-  Shortcuts
-  Alerts! (with auto-hide)
