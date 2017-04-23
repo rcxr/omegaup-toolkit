@@ -4,29 +4,35 @@ block content
   .panel.panel-default
     .panel-body
       .row#dashboard-tech
-        h1 tech
-        p { hotkey#{' '}
-          kbd
-            kbd a
-            | ,#{' '}
-            kbd t
-          | #{' '}}
+        .row-title
+          h1 tech
+          span.helper #{' '}
+          span { hotkey#{' '}
+            kbd
+              kbd a
+              | ,#{' '}
+              kbd t
+            | #{' '}}
       .row#dashboard-dev
-        h1 dev
-        p { hotkey#{' '}
-          kbd
-            kbd a
-            | ,#{' '}
-            kbd d
-          | #{' '}}
+        .row-title
+          h1 dev
+          span.helper #{' '}
+          span { hotkey#{' '}
+            kbd
+              kbd a
+              | ,#{' '}
+              kbd d
+            | #{' '}}
       .row#dashboard-social
-        h1 social
-        p { hotkey#{' '}
-          kbd
-            kbd a
-            | ,#{' '}
-            kbd s
-          | #{' '}}
+        .row-title
+          h1 social
+          span.helper #{' '}
+          span { hotkey#{' '}
+            kbd
+              kbd a
+              | ,#{' '}
+              kbd s
+            | #{' '}}
       .row#dashboard-other
         h1 other
   //

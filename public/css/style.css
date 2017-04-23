@@ -7,6 +7,17 @@ h1, h2, h3 {
   font-family: 'Pacifico', cursive;
 }
 
+.row {
+  text-align: center;
+}
+
+.row-title h1, .row-title span {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin: 5px;
+}
+
 .btn-group {
   margin-top: 5px;
 }
@@ -39,7 +50,6 @@ a.thumbnail {
 
 .dashboard {
   height: 64px;
-  text-align: center;
   color: black;
   overflow: hidden;
 }
@@ -63,7 +73,6 @@ a.thumbnail {
 
 .caption {
   width: 100%;
-  text-align: center;
   font-size: 12px;
 }
 
