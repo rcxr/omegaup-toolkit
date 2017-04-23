@@ -12,7 +12,7 @@ app.set("trust proxy", true);
 
 // Redirect root to /home
 app.get("/", (req, res) => {
-  res.redirect("/home");
+  res.redirect("home");
 });
 
 app.use("/home", require("./js/home/main"));
