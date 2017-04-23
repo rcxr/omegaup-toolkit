@@ -11,16 +11,16 @@ h1, h2, h3 {
   height: 20px;
 }
 
-#give-report-picker {
-  display: none;
-}
-
 .glyphicon-heart {
   color: red;
 }
 
 .glyphicon-home {
-  color: #58D;
+  color: #5588DD;
+}
+
+#give-report-picker {
+  display: none;
 }
 
 .alert, .panel, .navbar, .panel table td, .panel table {
@@ -28,11 +28,16 @@ h1, h2, h3 {
   box-shadow: none !important;
 }
 
+a.thumbnail {
+  text-decoration: none !important;
+}
+
 .dashboard {
   height: 128px;
-  width: 100%;
   text-align: center;
   font-size: 92px;
+  color: black;
+  overflow: hidden;
 }
 
 .helper {
@@ -47,14 +52,16 @@ h1, h2, h3 {
   vertical-align: middle;
 }
 
+.black {
+  filter: brightness(0);
+}
+
 .caption {
   width: 100%;
+  text-align: center;
+  font-size: 12px;
 }
 
 .caption p.title {
-  text-align: center;
-  font-size: 16px;
-  text-align: center;
   font-weight: bold;
-  font-family: 'Rubik', sans-serif;
 }

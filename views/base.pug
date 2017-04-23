@@ -9,12 +9,14 @@ html(lang="en")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Pacifico|Rubik")
     script(src="http://code.jquery.com/jquery-3.2.1.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    script(src="/js/lib/jquery.hotkeys.js")
+    link(rel="icon", type="image/png", href="/img/favicon.png")
   body
     .navbar.navbar-default
       .container-fluid
         a(href="#").navbar-header
           .navbar-brand
-            img(src="/img/omegaup.png").navbar-logo
+            img(src="/img/main.png").navbar-logo
             | Toolkit
         ul.nav.navbar-nav
           li
@@ -29,3 +31,4 @@ html(lang="en")
       block content
 // TODO
   Shortcuts
+  Alerts! (with timers)

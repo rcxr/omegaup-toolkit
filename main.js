@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.use("/home", require("./js/home/main"));
 app.use("/give", require("./js/give/main"));
-app.use(express.static("content"));
+app.use(express.static("public"));
 
 // Basic 404 handler
 app.use((req, res) => {
