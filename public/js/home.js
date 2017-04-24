@@ -66,8 +66,8 @@ $(function() {
     new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", "<img src='img/Twitter_Logo_White_On_Image.png'></img>", "tw", "", "t"),
     new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='img/FB-f-Logo__white_1024.png'></img>", "fb", "", "f"),
     new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='img/Logo-White-128px-R.png'></img>", "linkedIn", "", "l"),
-    new Thumbnail(Categories.NONE, "https://omegaup.com", "<img class='towhite' src='img/square.png'></img>", "com", "", "o"),
-    new Thumbnail(Categories.NONE, "https://omegaup.org", "<img class='towhite' src='img/square.png'></img>", "org", "", "i"),
+    new Thumbnail(Categories.NONE, "https://omegaup.com", "<img class='towhite' src='img/square128.png'></img>", "com", "", "o"),
+    new Thumbnail(Categories.NONE, "https://omegaup.org", "<img class='towhite' src='img/square128.png'></img>", "org", "", "i"),
     new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='towhite glyphicon glyphicon-gift'></i>", "orders", "", "b"),
   ];
 
