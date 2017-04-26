@@ -62,13 +62,14 @@ $(function() {
     new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='towhitecolor glyphicon glyphicon-briefcase'></i>", "erp", "", "e"),
     new Thumbnail(Categories.DEV, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", "<img class='towhitefilter' src='img/AppLockup_rgb_OneNote_Large_OneNote_88.png'></img>", "notes", "", "n"),
     new Thumbnail(Categories.DEV, "https://mail.google.com/mail/u/1/", "<i class='towhitecolor glyphicon glyphicon-envelope'></i>", "mail", "", "m"),
-    new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='towhitecolor glyphicon glyphicon-gift'></i>", "orders", "", "b"),
+    new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='towhitecolor glyphicon glyphicon-gift'></i>", "orders", "", "x"),
     new Thumbnail(Categories.TECH, "https://github.com/omegaup/omegaup", "<img src='img/GitHub-Mark-Light-120px-plus.png'></img>", "repo", "", "g"),
     new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='img/FB-f-Logo__white_1024.png'></img>", "fb", "", "f"),
     new Thumbnail(Categories.SOCIAL, "https://twitter.com/omegaUp", "<img src='img/Twitter_Logo_White_On_Image.png'></img>", "tw", "", "t"),
     new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='img/Logo-White-128px-R.png'></img>", "linkedIn", "", "l"),
     new Thumbnail(Categories.NONE, "https://omegaup.com", "<img src='img/logo.square.white.png'></img>", "com", "", "o"),
     new Thumbnail(Categories.NONE, "https://omegaup.org", "<img src='img/logo.square.white.png'></img>", "org", "", "i"),
+    new Thumbnail(Categories.NONE, "https://blog.omegaup.com/", "<img src='img/logo.square.white.png'></img>", "blog", "", "b"),
   ];
 
   thumbnails.forEach(function(thumbnail) { $("#dashboard-other").append(thumbnail.generate()); });
