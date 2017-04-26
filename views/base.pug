@@ -1,23 +1,27 @@
 doctype html
 html(lang="en")
   head
-    Title omegaUp - Toolkit
+    title omegaUp - Toolkit
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="css/style.css")
     link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
     link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Pacifico|Rubik")
+    link(rel="stylesheet", href="css/style.css")
     script(src="//code.jquery.com/jquery-3.2.1.min.js")
     script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
     script(src="js/lib/jquery.hotkeys.js")
     link(rel="icon", type="image/png", href="img/logo.favicon.bleed.png")
   body
-    .navbar.navbar-default
+    .navbar.navbar-default.navbar-fixed-top
       .container-fluid
-        a(href="#").navbar-header
-          .navbar-brand
-            img(src="img/main128.png").navbar-logo
+        .navbar-header
+          a.navbar-brand(href="#")
+            img.navbar-logo(src="img/main128.png")
             span.navbar-logo .toolkit
+          button.navbar-toggle.collapsed(data-toggle="collapse", data-target=".navbar-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
         .navbar-collapse.collapse
           ul.nav.navbar-nav
             li

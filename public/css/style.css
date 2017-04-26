@@ -1,3 +1,7 @@
+body {
+  padding-top: 70px;
+}
+
 h1, h2, h3 {
   font-family: 'Rubik', sans-serif;
   font-weight: bolder;
@@ -39,7 +43,7 @@ h1, h2, h3 {
   display: none;
 }
 
-.alert, .panel, .navbar, .panel table td, .panel table, .thumbnail {
+.alert, .panel, .panel table td, .panel table, .thumbnail {
   border: 0 !important;
   box-shadow: none !important;
 }
