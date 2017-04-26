@@ -70,7 +70,11 @@ a.thumbnail {
   font-size: 32px;
 }
 
-.towhite {
+.towhitecolor {
+  color: white;
+}
+
+.towhitefilter {
   filter: grayscale(100%) invert() brightness(1000%);
 }
 
