@@ -1,6 +1,8 @@
 $(function() {
   var timeRegex = /(\d+):(\d+)/;
   var matchRegex = /([\d.,]+)/;
+  var omegaUpRegex = /omegaUp/i;
+
   var timeHumanizer = humanizeDuration.humanizer({
     units: ["w", "d", "h", "m"],
     delimiter: " and ",
@@ -13,26 +15,26 @@ $(function() {
   };
 
   var timeQuoteGenerator = [
-    function(milliseconds) {
-      return "This is as much time as watching The Lord of The Rings: The Two Towers (the Blu Ray Extended Edition) " + numberHumanizer(milliseconds, 14100000)  + " times!";
+    function(value) {
+      return "This is as much time as watching The Lord of The Rings: The Two Towers (the Blu Ray Extended Edition) " + numberHumanizer(value, 14100000)  + " times!";
     },
-    function(milliseconds) {
-      return "This is as much time as playing " + numberHumanizer(milliseconds, 5400000)  + " full soccer matches!";
+    function(value) {
+      return "This is as much time as playing " + numberHumanizer(value, 5400000)  + " full soccer matches!";
     },
-    function(milliseconds) {
-      return "This is as much time as " + numberHumanizer(milliseconds, 15180000)  + " times the time Goku took to defeat Freeza! And that was A LOT!";
+    function(value) {
+      return "This is as much time as " + numberHumanizer(value, 15180000)  + " times the time Goku took to defeat Freeza! And that was A LOT!";
     },
   ];
 
   var matchQuoteGenerator = [
-    function(milliseconds) {
-      return "This is enought to get " + numberHumanizer(milliseconds, 46.98)  + " Introduction to Algorithms (by Cormen) books for the Mentor's program!";
+    function(value) {
+      return "This is enought to get " + numberHumanizer(value, 46.98)  + " Introduction to Algorithms (by Cormen) books for the Mentor's program!";
     },
-    function(milliseconds) {
-      return "This is enought to keep hosting omegaup.com for " + numberHumanizer(milliseconds, 100)  + " more years!";
+    function(value) {
+      return "This is enought to keep hosting omegaup.com for " + numberHumanizer(value, 100)  + " more years!";
     },
-    function(milliseconds) {
-      return "This is enought to send " + numberHumanizer(milliseconds, 5)  + " Coder of the Month packages to young students in Latin America!";
+    function(value) {
+      return "This is enought to send " + numberHumanizer(value, 5)  + " Coder of the Month packages to young students in Latin America!";
     },
   ];
 
@@ -73,11 +75,12 @@ $(function() {
       var match = 0;
 
       for (var i in lines) {
-        if (!lines[i]) {
+        if (!lines[i] || !omegaUpRegex.test(lines[i])) {
           continue;
         }
 
         var cells = lines[i].split(",");
+
         body.append($("<tr></tr>")
           .append($("<td></td>").text(new Date(cells[0] * 1000).toLocaleDateString()))
           .append($("<td></td>").text(cells[2]))
