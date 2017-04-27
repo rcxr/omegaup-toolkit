@@ -7,7 +7,7 @@ block content
         .btn-group
           a.btn.btn-success(href="https://microsoft.benevity.org/volunteer/external/track/", target="_blank")
             i.glyphicon.glyphicon-plus
-            span #{' '}Add Hours
+            span #{' '}Add Time
         .btn-group
           a.btn.btn-default(href="https://microsoft.benevity.org/volunteer/export/my-history/2017", target="_blank")
             i.glyphicon.glyphicon-download-alt
@@ -16,11 +16,26 @@ block content
             i.glyphicon.glyphicon-calendar
             span #{' '}Load Report
             input#give-report-picker(type="file")
+      #give-report
+        h3 So far, this year&hellip;
+        dl.dl-horizontal
+          dt
+            h4.glyphicon.glyphicon-time
+          dd
+            h4#give-report-time
+          dt
+            h4.glyphicon.glyphicon-usd
+          dd
+            h4#give-report-match
+          dt
+            h4.glyphicon.glyphicon-heart
+          dd
+            h3.pacifico#give-report-thanks
     table.table.table-hover.table-striped#give-table
       thead
         tr
           th Date
-          th Hours
+          th Time
           th Match
       tbody
     #give-info.jumbotron
@@ -32,12 +47,12 @@ block content
       | , additionally you can also review a report of what you have contributed this year!
       h3 How to&hellip;
       dl.dl-horizontal
-        dt Track Hours
+        dt Track Time
         dd
           | Simply press the#{' '}
           strong
             i.glyphicon.glyphicon-plus
-            span #{' '}Add Hours
+            span #{' '}Add Time
           | #{' '}button (this will take you to the #{' '}
           a(href="https://microsoft.benevity.org/volunteer/external/track/", target="_blank")
             strong Track External Volunteering
