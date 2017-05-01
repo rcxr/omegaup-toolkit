@@ -2,6 +2,14 @@ body {
   padding-top: 70px;
 }
 
+#notification-container {
+  min-height: 50px;
+}
+
+#notification-container .alert {
+  margin-bottom: 0;
+}
+
 h1, h2, h3 {
   font-family: 'Rubik', sans-serif;
   font-weight: bolder;
