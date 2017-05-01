@@ -75,7 +75,8 @@ $(function() {
   var scheduleNextNotification = function() {
     setTimeout(function() {
       if (notifications.length) {
-        $("#notification-container").append(notifications.shift().generate());
+        $("#notification-container").append(notifications[0].generate());
+        notifications.push(notifications.shift());
       }
     }, 2000);
   };
