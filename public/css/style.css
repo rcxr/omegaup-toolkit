@@ -3,11 +3,13 @@ body {
 }
 
 #notification-container {
-  min-height: 50px;
+  height: 50px;
 }
 
 #notification-container .alert {
+  height: 50px;
   margin-bottom: 0;
+  text-overflow: ellipsis;
 }
 
 h1, h2, h3 {

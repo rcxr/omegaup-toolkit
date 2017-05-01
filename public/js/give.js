@@ -4,8 +4,9 @@ $(function() {
   var omegaUpRegex = /omegaUp/i;
 
   var timeHumanizer = humanizeDuration.humanizer({
-    units: ["w", "d", "h", "m"],
+    units: ["mo", "d", "h", "m"],
     delimiter: " and ",
+    round: true,
     largest: 2
   });
 

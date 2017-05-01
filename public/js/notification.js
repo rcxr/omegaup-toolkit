@@ -9,6 +9,13 @@ $(function() {
     ALL: 31
   };
 
+  var timeHumanizer = humanizeDuration.humanizer({
+    units: ["mo", "d", "h", "m"],
+    delimiter: " and ",
+    round: true,
+    largest: 2
+  });
+
   function Notification(category, url, title, description, timeout, expiration) {
       var trigger = function() {
         if (!window.open(url, "_blank")) {
@@ -16,14 +23,15 @@ $(function() {
         }
       };
 
-      var expiration = moment(expiration).add(1, "day").milliseconds();
+      var expiration = moment().diff(moment(expiration, "MM-DD-YYYY").add(1, "days"), "milliseconds");
 
       this.filter = function(filter) {
-        return (filter & category) &&  moment().milliseconds() < expiration;
+        return (filter & category) && 0 < expiration;
       };
 
       this.generate = function() {
         var alert = $("<div></div>")
+          .hide()
           .addClass("alert alert-info alert-dismissible")
           .attr("role", "alert")
           .append($("<button></button>")
@@ -33,15 +41,18 @@ $(function() {
             .append($("<span></span>")
               .html("&times;")))
           .append($("<span></span>")
-            .text(instructions))
+            .text(description))
           .append($("<a></a>")
             .addClass("alert-link")
             .attr("href", url)
             .attr("target", "_blank")
             .text(title))
           .append($("<span></span>")
-            .text(" (deadline: " + deadline + ")"));
+            .text(" (ends in " + timeHumanizer(expiration) + ")"));
 
+        setTimeout(function() {
+          alert.show("slow");
+        }, 0);
         setTimeout(function() {
           alert.hide("slow", function() {
             alert.alert("close");
@@ -54,9 +65,9 @@ $(function() {
   };
 
   var notifications = [
-    new Notification(Categories.ALL, "https://www.lovetoride.net/washington/teams/1271?locale=en-US", "omegaUp Team", "Enroll into the Bike Everywhere Challenge, and join the ", 15000, "2017-05-01"),
-    new Notification(Categories.ALL, "https://goo.gl/forms/C1KdJnvl064y7tQp2", "𝝮Up.org Logo", "Don't forget to answer the ", 15000, "2017-05-05"),
-    new Notification(Categories.ALL, "https://goo.gl/forms/VzRfSAzIfdO1eer53", "Books for the Mentors Program", "Don't forget to answer the ", 15000, "2017-05-01"),
+    new Notification(Categories.ALL, "https://www.lovetoride.net/washington/teams/1271?locale=en-US", "omegaUp Team", "Enroll into the Bike Everywhere Challenge, and join the ", 10000, "05-31-2017"),
+    new Notification(Categories.ALL, "https://goo.gl/forms/C1KdJnvl064y7tQp2", "𝝮Up.org Logo", "Don't forget to answer the surver ", 10000, "05-05-2017"),
+    new Notification(Categories.ALL, "https://goo.gl/forms/VzRfSAzIfdO1eer53", "Books for the Mentors Program", "Don't forget to answer the survey ", 10000, "05-15-2017"),
   ];
 
   notifications.sort(function () { return 0.5 - Math.random(); });
@@ -64,9 +75,9 @@ $(function() {
   var scheduleNextNotification = function() {
     setTimeout(function() {
       if (notifications.length) {
-        $("#notification-container").append(notifications.shift().generate().hide("slow").show("slow"));
+        $("#notification-container").append(notifications.shift().generate());
       }
-    }, 5000);
+    }, 2000);
   };
 
   scheduleNextNotification();
