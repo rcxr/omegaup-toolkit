@@ -58,10 +58,11 @@ $(function() {
   var thumbnails = [
     new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", "<i class='towhitecolor glyphicon glyphicon-time'></i>", "track", "", "w"),
     new Thumbnail(Categories.ALL, "slack://omegauporg.slack.com", "<img src='img/slack_monochrome_white.png'></img>", "channels", "", "s"),
+    new Thumbnail(Categories.ALL, "http://drive.omegaup.com", "<i class='towhitecolor glyphicon glyphicon glyphicon-folder-open'></i>", "drive", "", "d"),
     new Thumbnail(Categories.DEV, "https://trello.com/omegaup", "<img src='img/trello-logo-white.png'></img>", "tasks", "", "q"),
     new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='towhitecolor glyphicon glyphicon-briefcase'></i>", "erp", "", "e"),
     new Thumbnail(Categories.DEV, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", "<img class='towhitefilter' src='img/AppLockup_rgb_OneNote_Large_OneNote_88.png'></img>", "notes", "", "n"),
-    new Thumbnail(Categories.DEV, "https://mail.google.com/mail/u/1/", "<i class='towhitecolor glyphicon glyphicon-envelope'></i>", "mail", "", "m"),
+    new Thumbnail(Categories.DEV, "http://mail.omegaup.com/", "<i class='towhitecolor glyphicon glyphicon-envelope'></i>", "mail", "", "m"),
     new Thumbnail(Categories.NONE, "https://docs.google.com/a/omegaup.com/spreadsheets/d/1l2H_wFmBOi6bec8cYi8B8mo2mIhf5jNcK5sBzGMPkgk/edit?usp=sharing", "<i class='towhitecolor glyphicon glyphicon-gift'></i>", "orders", "", "x"),
     new Thumbnail(Categories.TECH, "https://github.com/omegaup/omegaup", "<img src='img/GitHub-Mark-Light-120px-plus.png'></img>", "repo", "", "g"),
     new Thumbnail(Categories.SOCIAL, "https://www.facebook.com/omegaup", "<img src='img/FB-f-Logo__white_1024.png'></img>", "fb", "", "f"),
