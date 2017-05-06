@@ -74,6 +74,7 @@ $(function() {
 
       var time = moment.duration(0);
       var match = 0;
+      var last = null;
 
       for (var i in lines) {
         if (!lines[i] || !omegaUpRegex.test(lines[i])) {
@@ -83,13 +84,15 @@ $(function() {
         var cells = lines[i].split(",");
 
         body.append($("<tr></tr>")
-          .append($("<td></td>").text(new Date(cells[0] * 1000).toLocaleDateString()))
-          .append($("<td></td>").text(cells[2]))
-          .append($("<td></td>").text(cells[3].split(" ")[0])));
+          .append($("<td></td>").text(cells[0]))
+          .append($("<td></td>").text(cells[1]))
+          .append($("<td></td>").text(cells[3]))
+          .append($("<td></td>").text(cells[4].split(" ")[0])));
 
-        var timeMatches = timeRegex.exec(cells[2]);
-        var matchMatches = matchRegex.exec(cells[3]);
+        var timeMatches = timeRegex.exec(cells[3]);
+        var matchMatches = matchRegex.exec(cells[4]);
 
+        last = cells[0];
         time.add(parseInt(timeMatches[1]), "h").add(parseInt(timeMatches[2]), "m");
         match += parseInt(matchMatches[1]);
       }
