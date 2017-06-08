@@ -5,16 +5,20 @@ block content
     .panel-body
       .btn-toolbar
         .btn-group
-          a.btn.btn-success(href="https://microsoft.benevity.org/volunteer/external/track/", target="_blank")
+          a.btn.btn-primary(href="https://microsoft.benevity.org/wpgdonate/1/840-813404168", target="_blank")
+            i.glyphicon.glyphicon-heart
+            span #{' '}Donate!
+        .btn-group
+          a.btn.btn-success(href="https://microsoft.benevity.org/volunteer/external/track?cause_id=840-813404168", target="_blank")
             i.glyphicon.glyphicon-plus
-            span #{' '}Add Time
+            span #{' '}Track Time
         .btn-group
           a.btn.btn-default(href="https://microsoft.benevity.org/volunteer/export/my-history/2017", target="_blank")
             i.glyphicon.glyphicon-download-alt
-            span #{' '}Get Report
+            span #{' '}Get Your Report
           label.btn.btn-default(for="give-report-picker")
             i.glyphicon.glyphicon-calendar
-            span #{' '}Load Report
+            span #{' '}Load Your Report
             input#give-report-picker(type="file")
       #give-report
         h3 So far, this year&hellip;
@@ -48,14 +52,24 @@ block content
       | , additionally you can also review a report of what you have contributed this year!
       h3 How to&hellip;
       dl.dl-horizontal
+        dt Donate!
+        dd
+          | Simply press the#{' '}
+          strong
+            i.glyphicon.glyphicon-heart
+            span #{' '}Donate!
+          | #{' '}button (this will take you to the #{' '}
+          a(href="https://microsoft.benevity.org/volunteer/external/track?cause_id=840-813404168", target="_blank")
+            strong Donation
+          | #{' '} form).
         dt Track Time
         dd
           | Simply press the#{' '}
           strong
             i.glyphicon.glyphicon-plus
-            span #{' '}Add Time
+            span #{' '}Track Time
           | #{' '}button (this will take you to the #{' '}
-          a(href="https://microsoft.benevity.org/volunteer/external/track/", target="_blank")
+          a(href="https://microsoft.benevity.org/volunteer/external/track?cause_id=840-813404168", target="_blank")
             strong Track External Volunteering
           | #{' '} form).
         dt Get Report
@@ -63,7 +77,7 @@ block content
           | Click#{' '}
           strong
             i.glyphicon.glyphicon-download-alt
-            span #{' '}Get Report
+            span #{' '}Get Your Report
           | #{' '}to download the *.csv directly from the#{' '}
           a(href="https://microsoft.benevity.org", target="_blank")
             strong Microsoft Benevity
@@ -73,7 +87,7 @@ block content
           | Use#{' '}
           strong
             i.glyphicon.glyphicon-calendar
-            span #{' '}Load Report
+            span #{' '}Load Your Report
           | #{' '}to select the previously downloaded report and see your stats!
         dt
           h3.glyphicon.glyphicon-heart

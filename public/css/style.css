@@ -36,13 +36,23 @@ h1, h2, h3 {
   margin-top: 5px;
 }
 
+.btn-primary:hover {
+  background-color: #4477CC;
+  border-color: #3366BB;
+}
+
+.btn-primary {
+  background-color: #5588DD;
+  border-color: #4477CC;
+}
+
 .navbar-logo {
   float: left;
   height: 20px;
 }
 
 .glyphicon-heart {
-  color: red;
+  color: #DD8888;
 }
 
 .glyphicon-home {

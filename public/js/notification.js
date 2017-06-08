@@ -23,7 +23,7 @@ $(function() {
         }
       };
 
-      var expiration = moment().diff(moment(expiration, "MM-DD-YYYY").add(1, "days"), "milliseconds");
+      var expiration = moment(expiration, "MM-DD-YYYY").add(1, "days").diff(moment(), "milliseconds");
 
       this.filter = function(filter) {
         return (filter & category) && 0 < expiration;
@@ -68,7 +68,9 @@ $(function() {
     new Notification(Categories.ALL, "https://www.lovetoride.net/washington/teams/1271?locale=en-US", "omegaUp Team", "Enroll into the Bike Everywhere Challenge, and join the ", 10000, "05-31-2017"),
     new Notification(Categories.ALL, "https://goo.gl/forms/C1KdJnvl064y7tQp2", "𝝮Up.org Logo", "Don't forget to answer the surver ", 10000, "05-05-2017"),
     new Notification(Categories.ALL, "https://goo.gl/forms/VzRfSAzIfdO1eer53", "Books for the Mentors Program", "Don't forget to answer the survey ", 10000, "05-15-2017"),
-  ];
+  ].filter(function(notification) {
+    return notification.filter(Categories.ALL);
+  });
 
   notifications.sort(function () { return 0.5 - Math.random(); });
 

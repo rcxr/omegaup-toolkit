@@ -58,7 +58,7 @@ $(function() {
   var thumbnails = [
     new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", "<i class='towhitecolor glyphicon glyphicon-time'></i>", "track", "", "w"),
     new Thumbnail(Categories.ALL, "slack://omegauporg.slack.com", "<img src='img/slack_monochrome_white.png'></img>", "channels", "", "s"),
-    new Thumbnail(Categories.ALL, "http://drive.omegaup.com", "<i class='towhitecolor glyphicon glyphicon glyphicon-folder-open'></i>", "drive", "", "d"),
+    new Thumbnail(Categories.ALL, "http://drive.omegaup.com", "<i class='towhitecolor glyphicon glyphicon-folder-open'></i>", "drive", "", "d"),
     new Thumbnail(Categories.DEV, "https://trello.com/omegaup", "<img src='img/trello-logo-white.png'></img>", "tasks", "", "q"),
     new Thumbnail(Categories.DEV, "https://enterpos.net/omegaup/", "<i class='towhitecolor glyphicon glyphicon-briefcase'></i>", "erp", "", "e"),
     new Thumbnail(Categories.DEV, "onenote:https://d.docs-df.live.net/f3cc87f1cbe7befb/Documentos/OmegaUp/", "<img class='towhitefilter' src='img/AppLockup_rgb_OneNote_Large_OneNote_88.png'></img>", "notes", "", "n"),
@@ -70,7 +70,8 @@ $(function() {
     new Thumbnail(Categories.SOCIAL, "https://www.linkedin.com/company-beta/16244586/", "<img src='img/Logo-White-128px-R.png'></img>", "linkedIn", "", "l"),
     new Thumbnail(Categories.NONE, "https://omegaup.com", "<img src='img/logo.square.white.png'></img>", "com", "", "o"),
     new Thumbnail(Categories.NONE, "https://omegaup.org", "<img src='img/logo.square.white.png'></img>", "org", "", "i"),
-    new Thumbnail(Categories.NONE, "https://blog.omegaup.com/", "<img src='img/logo.square.white.png'></img>", "blog", "", "b"),
+    new Thumbnail(Categories.NONE, "https://drive.google.com/open?id=1MhuN-NwpsPI-ICbemvcTMmlzQuP5LQEBIzhsL6ppqxk", "<img src='img/logo.square.white.png'></img>", "bylaws", "", "."),
+    new Thumbnail(Categories.ALL, "https://tracker.toptal.com/app/web-tracker", "<i class='towhitecolor glyphicon glyphicon-time'></i>", "track", "", "w"),
   ];
 
   thumbnails.forEach(function(thumbnail) { $("#dashboard-other").append(thumbnail.generate()); });
